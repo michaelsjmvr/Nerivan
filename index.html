@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/index.css">
+    <title>KAIROS STONE - Sua melhor escolha em rochas naturais</title>
+</head>
+<body>
+    <header>
+        <picture><a href="#"><img src="/static/img/logo.fw.png" alt="Logo da Empresa (KAIROS STONE)"></picture></a>
+        <nav>
+            <ul class="nu2">
+                <a href="#sobre"><i class="bi bi-clipboard-check"></i> Sobre a Kairos</a>
+                <a href="#produtos"><i class="bi bi-box"></i> Produtos</a>
+                <a href="#atendimento"><i class="bi bi-headset"></i> Atendimento</a>
+            </ul>
+        </nav>
+    </header>
+    <section id="inicio" class="sec-1">
+        <div class="opc">
+            <div class="info-sec1">
+                <h1>Bem-vindo!</h1>
+                <h2 id="typing-effect">Sua melhor escolha em rochas naturais</h2>
+                <p>Oferecemos qualidade, e durabilidade em cada peça. Transforme seus projetos com a beleza única das rochas naturais!</p>
+                <a href="#sobre">Saiba mais</a>
+            </div>
+            <div class="info-sec1">
+                <picture><img src="/static/img/Background/006.jpg" alt=""></picture>
+            </div>
+        </div>
+    </section>
+    <section id="sobre" class="sec-2">
+        <div class="caixa-1">
+            <h2>Sobre a Kairos</h2>
+            <p>A Kairos é uma empresa especializada em rochas naturais, oferecendo produtos de alta qualidade para transformar seus projetos em obras de arte duráveis e imponentes. Com um atendimento diferenciado e atendimento personalizado, garantimos que cada peça seja perfeita para o seu espaço.</p>
+            <a href="#produtos" class="ver-produtos-btn">Ver Produtos</a>
+        </div>
+        <div class="caixa-2"></div>
+    </section>
+    <section id="produtos" class="sec-3">
+        <div class="titulo-produtos">
+            <h2>Nossos Produtos</h2>
+            <p>Descubra a qualidade e sofisticação das nossas rochas naturais. Selecione um produto para visualizar em detalhes.</p>
+        </div>
+    
+        <div class="container-produtos">
+            <div class="produto" onclick="abrirModal('produto1')">
+                <img src="/static/img/produtos/preto-via-lactea.jpg" alt="Preto Via Láctea">
+                <h3>PRETO VIA LÁCTEA</h3>
+                <p>Uma opção sofisticada, com tons escuros e veios sutis que lembram a galáxia.</p>
+            </div>
+            <div class="produto" onclick="abrirModal('produto2')">
+                <img src="/static/img/produtos/azul-imperial.jpg" alt="Azul Imperial">
+                <h3>AZUL IMPERIAL</h3>
+                <p>Um granito raro e exuberante, com tonalidades azuladas e detalhes dourados.</p>
+            </div>
+            <div class="produto" onclick="abrirModal('produto3')">
+                <img src="/static/img/produtos/titanium.jpg" alt="Titanium">
+                <h3>TITANIUM</h3>
+                <p>Moderno e impactante, o Titanium combina tons escuros e rajados metálicos.</p>
+            </div>
+            <div class="produto" onclick="abrirModal('produto4')">
+                <img src="/static/img/produtos/galaxy.jpg" alt="Galaxy">
+                <h3>GALAXY</h3>
+                <p>Com um fundo negro e partículas brilhantes, remete ao universo estrelado.</p>
+            </div>
+            <div class="produto" onclick="abrirModal('produto5')">
+                <img src="/static/img/produtos/taj-mahal.jpg" alt="Taj Mahal">
+                <h3>TAJ MAHAL</h3>
+                <p>Versatilidade e elegância são componentes presentes no Taj Mahal.</p>
+            </div>
+            <div class="produto" onclick="abrirModal('produto6')">
+                <img src="/static/img/produtos/black-river.jpg" alt="Black River">
+                <h3>BLACK RIVER</h3>
+                <p>Tons escuros mesclados a veios ondulados que lembram a fluidez dos rios.</p>
+            </div>
+            <div class="produto" onclick="abrirModal('produto7')">
+                <img src="/static/img/produtos/patagonia.jpg" alt="Patagonia">
+                <h3>PATAGONIA</h3>
+                <p>Uma pedra exótica com tons contrastantes e um visual verdadeiramente único.</p>
+            </div>
+            <div class="produto" onclick="abrirModal('produto8')">
+                <img src="/static/img/produtos/seal-pearl.jpg" alt="Seal Pearl">
+                <h3>SEAL PEARL</h3>
+                <p>Sofisticação em cada detalhe, com nuances peroladas e suaves texturas.</p>
+            </div>
+            <div class="produto" onclick="abrirModal('produto9')">
+                <img src="/static/img/produtos/blue-mare.jpg" alt="Blue Mare">
+                <h3>BLUE MARE</h3>
+                <p>A tonalidade azul e os veios dinâmicos trazem um toque luxuoso aos ambientes.</p>
+            </div>
+            <div class="produto" onclick="abrirModal('produto10')">
+                <img src="/static/img/produtos/brown-shadow.jpg" alt="Brown Shadow">
+                <h3>BROWN SHADOW</h3>
+                <p>Uma fusão perfeita entre tons terrosos e uma textura natural impressionante.</p>
+            </div>
+            <div class="produto" onclick="abrirModal('produto11')">
+                <img src="/static/img/produtos/branco-realeza.jpg" alt="Branco Realeza">
+                <h3>BRANCO REALEZA</h3>
+                <p>Um clássico atemporal, perfeito para ambientes claros e sofisticados.</p>
+            </div>
+            <div class="produto" onclick="abrirModal('produto12')">
+                <img src="/static/img/produtos/blue-phantom.jpg" alt="Blue Phantom">
+                <h3>BLUE PHANTOM</h3>
+                <p>Com um azul intenso e veios marcantes, transmite elegância e exclusividade.</p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal -->
+    <div id="modal-produto" class="modal">
+        <div class="modal-content">
+            <span class="fechar" onclick="fecharModal()">&times;</span>
+            <div class="modal-esquerda">
+                <img id="modal-imagem" src="" alt="Imagem do Produto">
+            </div>
+            <div class="modal-direita">
+                <h2 id="modal-titulo"></h2>
+                <p id="modal-descricao"></p>
+            </div>
+        </div>
+    </div>
+    
+    <section id="atendimento" class="sec-4">
+        <div class="cont-atendimento">
+            
+            <!-- Google Maps -->
+            <div class="map">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509379!2d144.9537363153169!3d-37.81627977975153!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad65d43f20d0c3d%3A0x5045675218ce6e0!2sMelbourne%20VIC%2C%20Austr%C3%A1lia!5e0!3m2!1spt-BR!2sbr!4v1649472054992!5m2!1spt-BR!2sbr" 
+                    allowfullscreen="" loading="lazy"></iframe>
+            </div>
+    
+            <!-- Contatos e Redes Sociais -->
+            <div class="contact">
+                <h2>Entre em Contato</h2>
+                <p>Estamos prontos para te atender! Entre em contato pelos canais abaixo.</p>
+                <p class="phone">📞 (21) 90000-0000</p>
+    
+                <!-- Redes Sociais -->
+                <div class="social-icons">
+                    <a href="#" class="social-icon facebook"><i class="bi bi-facebook"></i></a>
+                    <a href="#" class="social-icon whatsapp"><i class="bi bi-whatsapp"></i></a>
+                    <a href="#" class="social-icon instagram"><i class="bi bi-instagram"></i></a>
+                    <a href="mailto:contato@kairos.com" class="social-icon email"><i class="bi bi-envelope"></i></a>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <!-- Lado Esquerdo -->
+            <div class="footer-left">
+                <img src="/static/img/logo.fw.png" alt="Logo Kairos" class="logo">
+                <p class="slogan">Transformando o futuro, hoje!</p>
+            </div>
+    
+            <!-- Lado Direito -->
+            <div class="footer-right">
+                <div class="links">
+                    <h3>Links Rápidos</h3>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#sobre">Sobre</a></li>
+                        <li><a href="#produtos">Produtos</a></li>
+                        <li><a href="#atendimento">Atendimento</a></li>
+                    </ul>
+                </div>
+    
+                <div class="social">
+                    <h3>Redes Sociais</h3>
+                    <div class="social-icons2">
+                        <a href="#" class="social-icon facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="social-icon whatsapp"><i class="bi bi-whatsapp"></i></a>
+                        <a href="#" class="social-icon instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="mailto:contato@kairos.com" class="social-icon email"><i class="bi bi-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="footer-bottom">
+            <p>&copy; 2025 Kairos Stone - Todos os direitos reservados</p>
+            <p>5 anos de qualidade e eficiencia.</p>
+        </div>
+    </footer>
+
+    <div class="whats">
+        <!-- Botão de WhatsApp fixo -->
+        <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-btn">
+            <i class="bi bi-whatsapp"></i>
+        </a>
+    </div>
+    <script src="/static/javascript/index.js"></script>
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+</body>
+</html>

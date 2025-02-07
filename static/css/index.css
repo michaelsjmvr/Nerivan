@@ -1,0 +1,796 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Barra de rolagem (toda) */
+::-webkit-scrollbar {
+    width: 18px; /* Largura da barra de rolagem */
+}
+
+/* Fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+    background: #2e2e2e; /* Cor escura para o fundo da barra */
+    border-radius: 0px;
+}
+
+/* Cor da parte que se move (thumb) */
+::-webkit-scrollbar-thumb {
+    background: #444; /* Cor do "thumb" (parte que se move) */
+    border-radius: 10px;
+    border: 3px solid #2e2e2e; /* Adiciona borda ao redor para destacar */
+}
+
+/* Efeito de hover para o "thumb" */
+::-webkit-scrollbar-thumb:hover {
+    background: #666; /* Cor mais clara quando o mouse passa por cima */
+}
+
+/* CABEÇALHO */
+
+header{
+    width: 100%;
+    height: 90px;
+    background-color: white;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 62px;
+    position: fixed;
+    z-index: 999;
+}
+
+header picture img{
+    width: 86px;
+    height: 86px;
+}
+
+header nav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+
+header nav .nu1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .nu1 a{
+    text-decoration: none;
+    color: #403C3C;
+    text-align: center;
+    transition: 0.8s;
+    font-family: "Ubuntu", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin-right: 20px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav .nu1 a:hover {
+    color: #403C3C; 
+}
+
+header nav .nu1 a:hover i, 
+header nav .nu1 a:hover span {
+    color: #25D366;
+    transform: scale(1.1);
+}
+
+header nav .nu2{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .nu2 i{
+    margin-right: 6px;
+}
+
+header nav .nu2 a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: #403C3C;
+    text-decoration: none;
+    width: 140px;
+    height: 90px;
+    text-align: center;
+    transition: 0.8s;
+    font-family: "Ubuntu", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+header nav .nu2 a:hover{
+    background-color: #9f9a941a;
+}
+
+header nav .nu2 a:hover i{
+    color: #25D366;
+}
+
+header {
+    opacity: 0; /* Começa invisível */
+    transform: translateY(-20px); /* Move um pouco para cima */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+header.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* PADRÃO DAS SEÇÕES */
+.sec-1, .sec-2, .sec-4{
+    width: 100%;
+    height: 100vh;
+}
+.sec-3{
+    width: 100%;
+    height: 100%;
+}
+
+.sec-4{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* seção 1 */
+
+.sec-1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(/static/img/Background/008.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 90px;
+}
+
+.sec-1 .opc {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: rgba(64, 60, 60, 0.54); /* Fundo translúcido */
+    padding: 0px 100px;
+}
+
+.sec-1 .opc .info-sec1 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start; /* Alinha o conteúdo à esquerda */
+    text-align: left; /* Alinha o texto à esquerda */
+    color: white;
+    padding: 40px; /* Espaçamento interno */
+}
+
+.sec-1 .opc .info-sec1 h1 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    font-family: "Ubuntu", serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+#typing-effect {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    font-family: "Ubuntu", serif;
+    font-weight: 700;
+    font-style: normal;
+    white-space: nowrap; /* Mantém o texto em uma linha */
+    overflow: hidden; /* Esconde o texto que ainda não apareceu */
+    border-right: 3px solid white; /* Efeito do cursor piscando */
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+.sec-1 .opc .info-sec1 p {
+    font-size: 1rem;
+    max-width: 500px;
+    font-family: "Ubuntu", serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+@keyframes glowingLink {
+    0% {
+        box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.8);
+    }
+    25% {
+        box-shadow: 5px 5px 10px 2px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        box-shadow: 0px 10px 10px 2px rgba(255, 255, 255, 0.8);
+    }
+    75% {
+        box-shadow: -5px 5px 10px 2px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0px 0px 10px 2px rgba(255, 255, 255, 0.8);
+    }
+}
+
+.sec-1 .opc .info-sec1 a {
+    padding: 8px 12px;
+    background-color: white;
+    color: #333;
+    text-decoration: none;
+    margin-top: 18px;
+    font-family: "Ubuntu", serif;
+    font-weight: 300;
+    font-style: normal;
+    border-radius: 6px;
+    transition: 0.8s;
+    
+}
+
+.sec-1 .opc .info-sec1 a:hover {
+    background-color: rgb(221, 221, 221);
+    animation: glowingLink 3s infinite linear;
+    color: #DB4437;
+}
+
+.sec-1 .opc .info-sec1:last-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@keyframes glowingShadow {
+    0% {
+        box-shadow: 0px 0px 25px 5px rgba(255, 255, 255, 0.8);
+    }
+    25% {
+        box-shadow: 10px 10px 25px 5px rgba(255, 255, 255, 0.8);
+    }
+    50% {
+        box-shadow: 0px 20px 25px 5px rgba(255, 255, 255, 0.8);
+    }
+    75% {
+        box-shadow: -10px 10px 25px 5px rgba(255, 255, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0px 0px 25px 5px rgba(255, 255, 255, 0.8);
+    }
+}
+
+.sec-1 .opc .info-sec1 img {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    animation: glowingShadow 4s infinite linear;
+}
+
+/* seção 2 */
+
+.sec-2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sec-2 .caixa-1 {
+    width: 50%;
+    height: 100vh;
+    padding: 40px 50px;
+    background-color: #ffffff; /* Cor de fundo clara para contraste */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    border-radius: 12px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); /* Sombra sofisticada */
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.5s ease, box-shadow 0.3s ease;
+}
+
+.sec-2 .caixa-1 h2 {
+    font-size: 2.5rem;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 2;
+}
+
+.sec-2 .caixa-1 p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.8;
+    margin-bottom: 30px;
+    text-align: justify;
+    position: relative;
+    z-index: 2;
+}
+
+.sec-2 .caixa-1 .ver-produtos-btn {
+    background-color: #25D366; /* Cor verde do WhatsApp */
+    color: white;
+    padding: 14px 30px;
+    font-size: 1.2rem;
+    font-family: "Ubuntu", sans-serif;
+    font-weight: 600;
+    border-radius: 30px;
+    text-decoration: none;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15); /* Sombra suave no botão */
+    position: relative;
+    z-index: 2;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.sec-2 .caixa-1 .ver-produtos-btn:hover {
+    background-color: #128C7E; /* Cor mais escura no hover */
+    transform: translateY(-5px); /* Efeito de elevar o botão */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2); /* Sombra mais intensa no hover */
+}
+
+.sec-2 .caixa-1:hover {
+    transform: translateX(10px); /* Sutil movimento para a direita ao passar o mouse */
+    box-shadow: 0px 15px 40px rgba(0, 0, 0, 0.15); /* Aumenta a sombra para um efeito de destaque */
+}
+
+@keyframes rotatingShadow {
+    0% {
+        box-shadow: -15px 0px 30px rgba(0, 0, 0, 0.8);
+    }
+    25% {
+        box-shadow: -10px 10px 30px rgba(0, 0, 0, 0.8);
+    }
+    50% {
+        box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.8);
+    }
+    75% {
+        box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.8);
+    }
+    100% {
+        box-shadow: -15px 0px 30px rgba(0, 0, 0, 0.8);
+    }
+}
+
+.sec-2 .caixa-2 {
+    width: 50%;
+    height: 100vh;
+    background-image: url(/static/img/Background/004-2.png);
+    background-position: left 20% top 10%; /* Ajusta a posição da imagem */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    animation: rotatingShadow 3s infinite linear;
+}
+
+/* Seção de Produtos */
+.sec-3 {
+    padding: 60px 10%;
+    background: #f5f5f5;
+    text-align: center;
+}
+
+/* Título da Seção */
+.titulo-produtos {
+    margin-bottom: 40px;
+}
+
+.titulo-produtos h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.titulo-produtos p {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 600px;
+    margin: 10px auto;
+}
+
+/* Grid de Produtos */
+.container-produtos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Cartão do Produto */
+.produto {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.produto img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.produto h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
+}
+
+.produto p {
+    font-size: 1rem;
+    color: #666;
+    padding: 0 15px 15px;
+}
+
+/* Efeito ao Passar o Mouse */
+.produto:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Estiliza o modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    background: #1c1c1c;
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+}
+
+.modal-esquerda {
+    flex: 1;
+}
+
+.modal-esquerda img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.modal-direita {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.modal-direita h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.modal-direita p {
+    font-size: 1.2rem;
+}
+
+.fechar {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    color: white;
+    transition: 0.3s;
+}
+
+.fechar:hover {
+    color: red;
+}
+
+
+/* Estilos da sec-4 */
+.sec-4 {
+    padding: 50px 0;
+    margin-top: 30px; /* Garantir que não sobreponha a sec-3 */
+}
+
+.cont-atendimento {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1100px;
+    margin: auto;
+    gap: 30px;
+}
+
+/* Estilos do mapa */
+.map {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px;
+    height: 300px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.map:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Estilos de Contato */
+.contact {
+    flex: 1;
+    min-width: 300px;
+    text-align: center;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.contact:hover {
+    transform: scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2), 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.contact h2 {
+    font-size: 24px;
+    color: #333;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.contact p {
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.phone {
+    font-size: 18px;
+    font-weight: bold;
+    color: #444;
+}
+
+/* Estilos dos ícones sociais */
+.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    font-size: 28px;
+    text-decoration: none;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
+}
+
+.social-icon.facebook {
+    color: #1877f2;
+}
+
+.social-icon.whatsapp {
+    color: #25d366;
+}
+
+.social-icon.instagram {
+    color: #e4405f;
+}
+
+.social-icon.email {
+    color: #ea4335;
+}
+
+.social-icon:hover {
+    transform: scale(1.2);
+    opacity: 0.8;
+}
+
+
+/* footer */
+
+/* Estilos do footer */
+footer {
+    background-color: #121212; /* Cor de fundo dark */
+    color: #fff;
+    padding: 50px 0;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Contêiner principal */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: 0 auto;
+    gap: 30px;
+}
+
+/* Lado esquerdo */
+.footer-left {
+    flex: 1;
+    text-align: left;
+}
+
+.footer-left .logo {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+.footer-left h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.footer-left .slogan {
+    font-size: 18px;
+    color: #ddd;
+}
+
+/* Lado direito */
+.footer-right {
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* Coluna de Links */
+.links {
+    flex: 1;
+}
+
+.links h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.links ul li {
+    margin-bottom: 10px;
+}
+
+.links ul li a {
+    text-decoration: none;
+    color: #ddd;
+    transition: color 0.3s;
+}
+
+.links ul li a:hover {
+    color: #4e73df;
+}
+
+/* Coluna de Redes Sociais */
+.social {
+    flex: 1;
+    text-align: right;
+}
+
+.social h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.social-icons2 {
+    display: flex;
+    justify-content: flex-end;
+    gap: 20px;
+}
+
+.social-icon2 {
+    font-size: 28px;
+    text-decoration: none;
+    color: #ddd;
+    transition: color 0.3s;
+}
+
+.social-icon2:hover {
+    color: #4e73df;
+}
+
+/* Estilos do footer-bottom */
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px 0;
+    background-color: #0f0f0f;
+}
+
+.footer-bottom p {
+    font-size: 16px;
+    color: #bbb;
+}
+
+/* Estilos para o botão de WhatsApp fixo */
+.whatsapp-btn {
+    position: fixed;
+    bottom: 20px; /* Distância do botão do fundo da tela */
+    right: 20px;  /* Distância do botão da borda direita */
+    background-color: #25D366; /* Cor verde característica do WhatsApp */
+    padding: 15px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    color: white;
+    font-size: 30px; /* Tamanho do ícone */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Garante que o botão fique sobre outros elementos */
+}
+
+.whatsapp-btn:hover {
+    transform: scale(1.1); /* Efeito de zoom no hover */
+    background-color: #128C7E; /* Cor mais escura no hover */
+}
+
+/* Estilo do ícone */
+.whatsapp-btn i {
+    pointer-events: none; /* Evita que o clique vá para o ícone, permitindo clicar em qualquer parte do botão */
+}
+
+
+/* Responsividade */
+
+/* Responsivo para Telas Menores */
+@media (max-width: 1024px) {
+    .container-produtos {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .container-produtos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .container-produtos {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
