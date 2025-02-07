@@ -98,6 +98,26 @@ function abrirModal(produto) {
             imagem: "/static/img/produtos/blue-phantom.jpg",
             titulo: "BLUE PHANTOM",
             descricao: "Com um azul intenso e veios marcantes, transmite elegância e exclusividade."
+        },
+        produto13: {
+            imagem: "/static/img/produtos/blue-phantom.jpg",
+            titulo: "BLUE PHANTOM",
+            descricao: "Com um azul intenso e veios marcantes, transmite elegância e exclusividade."
+        },
+        produto14: {
+            imagem: "/static/img/produtos/blue-phantom.jpg",
+            titulo: "BLUE PHANTOM",
+            descricao: "Com um azul intenso e veios marcantes, transmite elegância e exclusividade."
+        },
+        produto15: {
+            imagem: "/static/img/produtos/blue-phantom.jpg",
+            titulo: "BLUE PHANTOM",
+            descricao: "Com um azul intenso e veios marcantes, transmite elegância e exclusividade."
+        },
+        produto16: {
+            imagem: "/static/img/produtos/blue-phantom.jpg",
+            titulo: "BLUE PHANTOM",
+            descricao: "Com um azul intenso e veios marcantes, transmite elegância e exclusividade."
         }
     };
     
