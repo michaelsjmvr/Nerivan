@@ -100,24 +100,24 @@ function abrirModal(produto) {
             descricao: "Com um azul intenso e veios marcantes, transmite elegância e exclusividade."
         },
         produto13: {
-            imagem: "/static/img/produtos/blue-phantom.jpg",
-            titulo: "BLUE PHANTOM",
-            descricao: "Com um azul intenso e veios marcantes, transmite elegância e exclusividade."
+            imagem: "/static/img/produtos/sienas.jpg",
+            titulo: "BRANCO SIENA",
+            descricao: "Um branco puro e sofisticado que transmite leveza e amplitude, ideal para quem busca um ambiente clean e elegante."
         },
         produto14: {
-            imagem: "/static/img/produtos/blue-phantom.jpg",
-            titulo: "BLUE PHANTOM",
-            descricao: "Com um azul intenso e veios marcantes, transmite elegância e exclusividade."
+            imagem: "/static/img/produtos/dallas.jpg",
+            titulo: "BRANCO DALLAS",
+            descricao: "A combinação perfeita entre sutileza e resistência, proporcionando sofisticação atemporal aos seus projetos."
         },
         produto15: {
-            imagem: "/static/img/produtos/blue-phantom.jpg",
-            titulo: "BLUE PHANTOM",
-            descricao: "Com um azul intenso e veios marcantes, transmite elegância e exclusividade."
+            imagem: "/static/img/produtos/itaunas.jpg",
+            titulo: "BRANCO ITAUNAS",
+            descricao: "Seu tom suave e textura única criam um ambiente acolhedor, perfeito para espaços modernos e sofisticados."
         },
         produto16: {
-            imagem: "/static/img/produtos/blue-phantom.jpg",
-            titulo: "BLUE PHANTOM",
-            descricao: "Com um azul intenso e veios marcantes, transmite elegância e exclusividade."
+            imagem: "/static/img/produtos/Fortaleza.jpg",
+            titulo: "FORTALEZA",
+            descricao: "Inspirado na força e na resistência, esse granito traduz imponência e requinte para qualquer ambiente."
         }
     };
     
