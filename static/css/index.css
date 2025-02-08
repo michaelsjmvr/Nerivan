@@ -31,7 +31,7 @@
 
 /* CABEÇALHO */
 
-header{
+.desktop-header{
     width: 100%;
     height: 90px;
     background-color: white;
@@ -44,25 +44,25 @@ header{
     z-index: 999;
 }
 
-header picture img{
+.desktop-header picture img{
     width: 86px;
     height: 86px;
 }
 
-header nav{
+.desktop-header nav{
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
 }
 
-header nav .nu1{
+.desktop-header nav .nu1{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-header nav .nu1 a{
+.desktop-header nav .nu1 a{
     text-decoration: none;
     color: #403C3C;
     text-align: center;
@@ -74,27 +74,27 @@ header nav .nu1 a{
     transition: color 0.3s ease, transform 0.3s ease;
 }
 
-header nav .nu1 a:hover {
+.desktop-header nav .nu1 a:hover {
     color: #403C3C; 
 }
 
-header nav .nu1 a:hover i, 
-header nav .nu1 a:hover span {
+.desktop-header nav .nu1 a:hover i, 
+.desktop-header nav .nu1 a:hover span {
     color: #25D366;
     transform: scale(1.1);
 }
 
-header nav .nu2{
+.desktop-header nav .nu2{
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-header nav .nu2 i{
+.desktop-header nav .nu2 i{
     margin-right: 6px;
 }
 
-header nav .nu2 a{
+.desktop-header nav .nu2 a{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -110,21 +110,21 @@ header nav .nu2 a{
     font-style: normal;
 }
 
-header nav .nu2 a:hover{
+.desktop-header nav .nu2 a:hover{
     background-color: #9f9a941a;
 }
 
-header nav .nu2 a:hover i{
+.desktop-header nav .nu2 a:hover i{
     color: #25D366;
 }
 
-header {
+.desktop-header {
     opacity: 0; /* Começa invisível */
     transform: translateY(-20px); /* Move um pouco para cima */
     transition: opacity 1.5s ease-out, transform 1.5s ease-out;
 }
 
-header.show {
+.desktop-header.show {
     opacity: 1;
     transform: translateY(0);
 }
@@ -748,7 +748,7 @@ footer {
 /* Estilos para o botão de WhatsApp fixo */
 .whatsapp-btn {
     position: fixed;
-    bottom: 20px; /* Distância do botão do fundo da tela */
+    bottom: 90px; /* Distância do botão do fundo da tela */
     right: 20px;  /* Distância do botão da borda direita */
     background-color: #25D366; /* Cor verde característica do WhatsApp */
     padding: 15px;
@@ -774,6 +774,10 @@ footer {
 }
 
 
+.cabecalho-mobile {
+    display: none;
+}
+
 /* Responsividade */
 
 /* Responsivo para Telas Menores */
@@ -793,4 +797,180 @@ footer {
     .container-produtos {
         grid-template-columns: repeat(1, 1fr);
     }
+
+    .desktop-header{
+        display: none;
+    }
+
+    .cabecalho-mobile { display: block; width: 100%; }
+
+        .topo-mobile {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px 20px;
+            background-color: white;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            z-index: 999;
+        }
+        
+        #menu-mobile-botao {
+            background: none;
+            border: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        .topo-mobile img {
+            width: 80px; /* Ajusta a largura da imagem */
+            height: auto; /* Mantém a proporção */
+            max-height: 60px; /* Define uma altura máxima */
+        }
+
+        #menu-mobile {
+            display: none;
+            flex-direction: row;
+            background: white;
+            position: fixed;
+            bottom: 0px;
+            right: 0px;
+            width: auto;
+            padding: 40px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            height: 90px;
+            justify-content: center;
+            align-items: center;
+            
+        }
+
+        #menu-mobile.mostrar {
+            display: flex;
+            animation: deslizarParaEsquerda 0.3s ease-in-out;
+        }
+
+        @keyframes deslizarParaEsquerda {
+            from { opacity: 0; transform: translateX(-10px); }
+            to { opacity: 1; transform: translateX(0); }
+        }
+
+        .lista-menu-mobile {
+            list-style: none;
+            display: flex;
+            gap: 40px;
+            padding: 0;
+            margin: 0;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .menu-link {
+            text-decoration: none;
+            color: #333;
+            padding: 0px;
+            transition: color 0.3s ease;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-size: 18px;
+        }
+
+        .menu-link:hover, .menu-link.ativo {
+            color: #25D366;
+        }
+
+        .menu-link i{
+            font-size: 25px;
+        }
+
+        /* Estilização da Seção Inicial */
+        .sec-1{
+            display: none;
+        }
+
+        .sec-1-mobile {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/static/img/Background/006.jpg') no-repeat center center/cover;
+            position: relative;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        
+        .info-sec1 {
+            max-width: 400px;
+            color: white;
+            word-wrap: break-word;
+            overflow-wrap: break-word;
+            margin: 0 auto;
+        }
+        
+        .info-sec1 h1 {
+            font-size: 2.5rem;
+            font-weight: bold;
+        }
+        
+        .info-sec1 h2 {
+            font-size: 1.8rem;
+            color: #25D366;
+            font-weight: 500;
+            margin-top: 10px;
+            word-break: break-word;
+            white-space: normal;
+            display: inline-block;
+        }
+        
+        .info-sec1 p {
+            font-size: 1rem;
+            margin-top: 15px;
+            line-height: 1.5;
+        }
+        
+        .info-sec1 a {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+        }
+        
+        .info-sec1 a:hover {
+            background-color: #1DA851;
+        }
+
+        #typing-effect-mobile {
+            font-size: 2rem;
+            margin-bottom: 10px;
+            font-family: "Ubuntu", serif;
+            font-weight: 700;
+            font-style: normal;
+            display: inline-block;
+            white-space: nowrap; /* Impede que o texto quebre automaticamente */
+            overflow: hidden; /* Esconde o texto que ainda não apareceu */
+            border-right: 3px solid white; /* Efeito do cursor piscando */
+            width: 0; /* Inicialmente sem largura */
+            animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
+        }
+        
+        /* Animação de digitação */
+        @keyframes typing {
+            from { width: 0; }
+            to { width: 100%; }
+        }
+        
+        /* Efeito do cursor piscando */
+        @keyframes blink {
+            50% { border-color: transparent; }
+        }
+        
 }
