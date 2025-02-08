@@ -189,18 +189,3 @@ document.querySelectorAll(".menu-link").forEach(link => {
         this.classList.add("ativo");
     });
 });
-
-document.addEventListener("DOMContentLoaded", function () {
-    function ajustarTexto() {
-        let h2 = document.getElementById("typing-effect");
-        if (window.innerWidth <= 480) {
-            h2.innerHTML = h2.innerHTML.replace(" escolha ", " escolha<br>");
-        } else {
-            h2.innerHTML = "Sua melhor escolha em rochas naturais";
-        }
-    }
-
-    // Chamar ao carregar e ao redimensionar a tela
-    ajustarTexto();
-    window.addEventListener("resize", ajustarTexto);
-});
