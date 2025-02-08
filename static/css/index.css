@@ -748,7 +748,7 @@ footer {
 /* Estilos para o botão de WhatsApp fixo */
 .whatsapp-btn {
     position: fixed;
-    bottom: 90px; /* Distância do botão do fundo da tela */
+    bottom: 20px; /* Distância do botão do fundo da tela */
     right: 20px;  /* Distância do botão da borda direita */
     background-color: #25D366; /* Cor verde característica do WhatsApp */
     padding: 15px;
@@ -1090,5 +1090,9 @@ footer {
             margin-top: 20px;
             font-size: 12px;
             color: #aaa;
+        }
+
+        .whatsapp-btn {
+            bottom: 100px;
         }
 }
