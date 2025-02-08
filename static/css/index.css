@@ -782,6 +782,10 @@ footer {
     display: none;
 }
 
+.sec-2-mobile{
+    display: none;
+}
+
 /* Responsividade */
 
 /* Responsivo para Telas Menores */
@@ -898,7 +902,7 @@ footer {
 
         .sec-1-mobile {
             width: 100%;
-            min-height: 100vh;
+            min-height: 114vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -908,7 +912,7 @@ footer {
             text-align: center;
         }
         
-        .info-sec1 {
+        .sec-1-mobile .info-sec1 {
             max-width: 400px;
             color: white;
             word-wrap: break-word;
@@ -916,12 +920,12 @@ footer {
             margin: 0 auto;
         }
         
-        .info-sec1 h1 {
+        .sec-1-mobile .info-sec1 h1 {
             font-size: 2.5rem;
             font-weight: bold;
         }
         
-        .info-sec1 h2 {
+        .sec-1-mobile .info-sec1 h2 {
             font-size: 1.8rem;
             color: #25D366;
             font-weight: 500;
@@ -931,13 +935,13 @@ footer {
             display: inline-block;
         }
         
-        .info-sec1 p {
+        .sec-1-mobile .info-sec1 p {
             font-size: 1rem;
             margin-top: 15px;
             line-height: 1.5;
         }
         
-        .info-sec1 a {
+        .sec-1-mobile .info-sec1 a {
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
@@ -948,7 +952,7 @@ footer {
             transition: background 0.3s ease-in-out;
         }
         
-        .info-sec1 a:hover {
+        .sec-1-mobile .info-sec1 a:hover {
             background-color: #1DA851;
         }
 
@@ -959,22 +963,59 @@ footer {
             font-weight: 700;
             font-style: normal;
             display: inline-block;
-            white-space: nowrap; /* Impede que o texto quebre automaticamente */
-            overflow: hidden; /* Esconde o texto que ainda não apareceu */
-            border-right: 3px solid white; /* Efeito do cursor piscando */
-            width: 0; /* Inicialmente sem largura */
-            animation: typing 3s steps(30, end) forwards, blink 0.7s infinite;
         }
         
-        /* Animação de digitação */
-        @keyframes typing {
-            from { width: 0; }
-            to { width: 100%; }
+        .sec-2{
+            display: none;
         }
         
-        /* Efeito do cursor piscando */
-        @keyframes blink {
-            50% { border-color: transparent; }
+        .sec-2-mobile {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background-image: url('/static/img/Background/004-2.png');
+            background-size: cover;
+            background-attachment: fixed;
+            background-position: center;
+            padding: 50px 20px;
+            color: white;
         }
         
+        .sec-2-mobile .caixa-1 {
+            max-width: 600px;
+            background: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente para melhor leitura */
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        
+        .sec-2-mobile .caixa-1 h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .sec-2-mobile .caixa-1 p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+        
+        .sec-2-mobile .ver-produtos-btn {
+            display: inline-block;
+            padding: 12px 25px;
+            background-color: #25D366;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s ease-in-out;
+        }
+        
+        .sec-2-mobile .ver-produtos-btn:hover {
+            background-color: #1DA851;
+        }
 }
